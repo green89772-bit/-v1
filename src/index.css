@@ -1,0 +1,138 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    transition: background-color 0.4s ease, color 0.4s ease;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+}
+
+/* Theme variables setup */
+:root {
+  --sb-canvas: #FAF7F2;
+  --sb-card: #FFFFFF;
+  --sb-primary: #232220;
+  --sb-secondary: rgba(35, 34, 32, 0.65);
+  --sb-rust: #D97736;
+  --sb-jade: #4E876A;
+  --sb-jade-tint: rgba(78, 135, 106, 0.08);
+  --sb-pencil: rgba(35, 34, 32, 0.08);
+  --sb-shadow: 0 12px 36px rgba(35, 34, 32, 0.03);
+}
+
+.theme-sage {
+  --bg-primary: #17241e;
+  --bg-card: #203129;
+  --bg-card-hover: #293d34;
+  --border-color: #354e42;
+  --text-main: #e8f0eb;
+  --text-muted: #9bb5a7;
+  --accent-color: #72a991;
+  --accent-hover: #8ac0a9;
+  --accent-glow: rgba(114, 169, 145, 0.25);
+  --badge-bg: #2b4238;
+}
+
+.theme-amber {
+  --bg-primary: #1f1712;
+  --bg-card: #2c2019;
+  --bg-card-hover: #3a2b22;
+  --border-color: #49372c;
+  --text-main: #f8efe8;
+  --text-muted: #c7b0a0;
+  --accent-color: #d98e48;
+  --accent-hover: #e6a262;
+  --accent-glow: rgba(217, 142, 72, 0.25);
+  --badge-bg: #443226;
+}
+
+.theme-deep_ocean {
+  --bg-primary: #0f1826;
+  --bg-card: #182538;
+  --bg-card-hover: #21324a;
+  --border-color: #2b415e;
+  --text-main: #e8f1fa;
+  --text-muted: #95b3d4;
+  --accent-color: #4f91cd;
+  --accent-hover: #6ea7dc;
+  --accent-glow: rgba(79, 145, 205, 0.25);
+  --badge-bg: #243852;
+}
+
+.app-container {
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  min-height: 100vh;
+}
+
+.card-panel {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  transition: all 0.3s ease;
+}
+
+.card-panel-hover:hover {
+  background-color: var(--bg-card-hover);
+  border-color: var(--accent-color);
+}
+
+.accent-text {
+  color: var(--accent-color);
+}
+
+.accent-bg {
+  background-color: var(--accent-color);
+}
+
+.accent-border {
+  border-color: var(--accent-color);
+}
+
+.muted-text {
+  color: var(--text-muted);
+}
+
+.custom-button {
+  background-color: var(--accent-color);
+  color: #0f1713;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.custom-button:hover {
+  background-color: var(--accent-hover);
+  box-shadow: 0 0 16px var(--accent-glow);
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 1;
+    box-shadow: 0 0 30px var(--accent-glow);
+  }
+}
+
+.pulse-animation {
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-color);
+}

@@ -1,0 +1,6 @@
+{
+  "name": "蒼鷺隨身診室 - 待業與當機急救站",
+  "description": "專為低潮、當機與焦慮設計的兩階段急救（體感破局 + 雙欄認知重構）、白噪音環境音與《未啟程的遠方》心理圖書室。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
